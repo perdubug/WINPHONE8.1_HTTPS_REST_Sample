@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.1">
+  <CommandSet xml:lang="zh-cn" Name="JADE.VCD">
+    <CommandPrefix>小黑</CommandPrefix>
+    <Example>控制智能插座</Example>
+
+    <Command Name="TurnOn_Light">
+      <Example>打开卧室夜灯</Example>
+      <ListenFor>[请][打]开{dictatedSearchTerms}夜灯</ListenFor> 
+      <Feedback>请稍候，正在打开夜灯</Feedback>
+      <Navigate/>
+    </Command>
+
+    <Command Name="TurnOff_Light">
+      <Example>关闭卧室夜灯</Example>
+      <ListenFor>[请]关[闭]{dictatedSearchTerms}夜灯</ListenFor>
+      <Feedback>请稍候，正在关闭夜灯</Feedback>
+      <Navigate/>
+    </Command>
+
+    <PhraseTopic Label="dictatedSearchTerms" Scenario="Search">
+        <Subject>MSDN</Subject>
+    </PhraseTopic>
+
+  </CommandSet>
+</VoiceCommands>
+
